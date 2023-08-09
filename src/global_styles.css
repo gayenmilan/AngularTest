@@ -13,3 +13,22 @@ body {
 h1 {
   color: #f00;
 }
+
+.details_table tr td .mat-icon {
+  font-size: 22px;
+  height: auto;
+  width: auto;
+  vertical-align: top;
+}
+
+.completed_ico {
+  color: #46c352;
+}
+
+.info_ico {
+  color: #febb30;
+}
+
+.cancel_ico {
+  color: #fd0930;
+}

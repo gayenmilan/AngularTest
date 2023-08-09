@@ -28,6 +28,23 @@
         <tr>
           <td>Claim Status</td>
           <td>
+            <mat-icon
+              class="status_icon completed_ico"
+              *ngIf="user.claimDetails.claimStatus == 'COMPLETED'"
+              >check_circle</mat-icon
+            >
+            <mat-icon
+              class="status_icon cancel_ico"
+              *ngIf="user.claimDetails.claimStatus == 'NOT_RECEIVED'"
+              >cancel</mat-icon
+            >
+            <mat-icon
+              class="status_icon info_ico"
+              *ngIf="
+                user.claimDetails.claimStatus == 'ADDITIONAL_INFO_REQUIRED'
+              "
+              >info</mat-icon
+            >
             {{ user.claimDetails.claimStatus }}
           </td>
         </tr>
