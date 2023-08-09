@@ -7,8 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { ClaimstatusComponent } from './claimstatus/claimstatus.component';
+import { ClaimdetailsComponent } from './claimdetails/claimdetails.component';
+
+const appRoutes: Routes = [
+  //{ path: '', component: AppComponent },
+  { path: '', component: ClaimstatusComponent },
+  { path: 'claimdetails', component: ClaimdetailsComponent },
+];
 
 @NgModule({
   imports: [
@@ -20,8 +29,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MatListModule,
     MatIconModule,
+    RouterModule.forRoot(appRoutes),
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, ClaimdetailsComponent, ClaimstatusComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {

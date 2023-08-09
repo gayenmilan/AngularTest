@@ -21,6 +21,10 @@ h1 {
   vertical-align: top;
 }
 
+.arrow_custom {
+  color: #4e7cce;
+}
+
 .completed_ico {
   color: #46c352;
 }

@@ -1,0 +1,37 @@
+<div *ngFor="let usern of newuser">
+  <div class="list_item" *ngIf="usern.claimDetails.claimNumber == 'CL34246334'">
+    <table class="details_table">
+      <tr>
+        <td>Patient Name</td>
+        <td>
+          {{
+            usern.patientDetails.firstName + ' ' + usern.patientDetails.lastName
+          }}
+        </td>
+      </tr>
+
+      <tr>
+        <td>Claim Number</td>
+        <td>
+          {{ usern.claimDetails.claimNumber }}
+        </td>
+      </tr>
+
+      <tr>
+        <td>Date Submitted</td>
+        <td>
+          {{ usern.claimDetails.dateSubmitted }}
+        </td>
+      </tr>
+
+      <tr>
+        <td>Claim Status</td>
+        <td>
+          {{ usern.claimDetails.claimStatus }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<a routerLink="">Click for Home</a>
