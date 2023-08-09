@@ -1,1 +1,44 @@
-<h1>Hello There</h1>
+<mat-tab-group>
+  <mat-tab label="Claim Status">
+    <div *ngFor="let user of userinfo" class="list_item">
+      <table class="details_table">
+        <tr>
+          <td>Claim Number</td>
+          <td>
+            {{
+              user.patientDetails.firstName + ' ' + user.patientDetails.lastName
+            }}
+          </td>
+        </tr>
+
+        <tr>
+          <td>Patient Name</td>
+          <td>
+            {{ user.claimDetails.claimNumber }}
+          </td>
+        </tr>
+
+        <tr>
+          <td>Date Submitted</td>
+          <td>
+            {{ user.claimDetails.dateSubmitted }}
+          </td>
+        </tr>
+
+        <tr>
+          <td>Claim Status</td>
+          <td>
+            {{ user.claimDetails.claimStatus }}
+          </td>
+        </tr>
+      </table>
+      <mat-icon
+        *ngIf="user.claimDetails.claimStatus !== 'COMPLETED'"
+        class="arrow_custom"
+        >arrow_forward_ios</mat-icon
+      >
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Documents Recived"> Documents Recived </mat-tab>
+</mat-tab-group>

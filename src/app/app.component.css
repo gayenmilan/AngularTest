@@ -1,0 +1,27 @@
+.list_item {
+  background-color: #f1f1f1;
+  margin: 5px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e3;
+  display: flex;
+  align-items: center;
+}
+
+.details_table {
+  width: calc(100% - 20px);
+}
+
+.details_table tr td {
+  padding: 3px;
+}
+
+.details_table tr td:first-child {
+  font-weight: bold;
+  font-size: 13px;
+  width: 30%;
+}
+
+.arrow_custom {
+  color: #4e7cce;
+}

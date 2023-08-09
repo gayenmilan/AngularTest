@@ -1,4 +1,15 @@
 /* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-size: 14px;
+  line-height: normal;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1 {
   color: #f00;
 }
