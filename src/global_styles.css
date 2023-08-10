@@ -1,6 +1,8 @@
 /* Add application styles & imports to this file! */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 body {
   font-size: 14px;
   line-height: normal;
@@ -8,10 +10,6 @@ body {
 
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h1 {
-  color: #f00;
 }
 
 .details_table tr td .mat-icon {
@@ -35,4 +33,11 @@ h1 {
 
 .cancel_ico {
   color: #fd0930;
+}
+
+.hdr_container,
+.ftr_container {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
 }

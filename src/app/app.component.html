@@ -1,66 +1,27 @@
-<!-- <mat-tab-group>
-  <mat-tab label="Claim Status">
-    <div *ngFor="let user of userinfo" class="list_item">
-      <table class="details_table">
-        <tr>
-          <td>Patient Name</td>
-          <td>
-            {{
-              user.patientDetails.firstName + ' ' + user.patientDetails.lastName
-            }}
-          </td>
-        </tr>
+<section>
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="col-md-12">
+          <div class="hdr_container">
+            <h1>Header</h1>
+          </div>
+        </div>
+      </header>
 
-        <tr>
-          <td>Claim Number</td>
-          <td>
-            {{ user.claimDetails.claimNumber }}
-          </td>
-        </tr>
+      <main>
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
 
-        <tr>
-          <td>Date Submitted</td>
-          <td>
-            {{ user.claimDetails.dateSubmitted }}
-          </td>
-        </tr>
-
-        <tr>
-          <td>Claim Status</td>
-          <td>
-            <mat-icon
-              class="status_icon completed_ico"
-              *ngIf="user.claimDetails.claimStatus == 'COMPLETED'"
-              >check_circle</mat-icon
-            >
-            <mat-icon
-              class="status_icon cancel_ico"
-              *ngIf="user.claimDetails.claimStatus == 'NOT_RECEIVED'"
-              >cancel</mat-icon
-            >
-            <mat-icon
-              class="status_icon info_ico"
-              *ngIf="
-                user.claimDetails.claimStatus == 'ADDITIONAL_INFO_REQUIRED'
-              "
-              >info</mat-icon
-            >
-            {{ user.claimDetails.claimStatus }}
-          </td>
-        </tr>
-      </table>
-      <a routerLink="/claimdetails">
-        <mat-icon
-          *ngIf="user.claimDetails.claimStatus !== 'COMPLETED'"
-          class="arrow_custom"
-          >arrow_forward_ios</mat-icon
-        >
-      </a>
+      <footer>
+        <div class="col-md-12">
+          <div class="ftr_container">
+            <h2>Footer</h2>
+          </div>
+        </div>
+      </footer>
     </div>
-  </mat-tab>
-
-  <mat-tab label="Documents Recived"> Documents Recived </mat-tab>
-</mat-tab-group> -->
-
-<router-outlet></router-outlet>
-<!-- <app-claimdetails></app-claimdetails> -->
+  </div>
+</section>
