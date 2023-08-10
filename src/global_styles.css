@@ -12,6 +12,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.hdr_container,
+.ftr_container {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/*Claim Details and Status Page Style Start Here*/
 .details_table tr td .mat-icon {
   font-size: 22px;
   height: auto;
@@ -35,9 +43,27 @@ body {
   color: #fd0930;
 }
 
-.hdr_container,
-.ftr_container {
-  background-color: #ccc;
+.list_item {
+  background-color: #f1f1f1;
+  margin: 10px 0px;
   padding: 10px;
-  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #e2e2e3;
+  display: flex;
+  align-items: center;
 }
+
+.details_table {
+  width: calc(100% - 20px);
+}
+
+.details_table tr td {
+  padding: 3px;
+}
+
+.details_table tr td:first-child {
+  font-weight: bold;
+  font-size: 13px;
+  width: 30%;
+}
+/*Claim Details and Status Page Style Ends Here*/

@@ -1,40 +1,54 @@
-<div *ngFor="let usern of newuser">
-  <div class="list_item" *ngIf="usern.claimDetails.claimNumber == this.claimid">
-    <table class="details_table">
-      <tr>
-        <td>Patient Name</td>
-        <td>
-          {{
-            usern.patientDetails.firstName + ' ' + usern.patientDetails.lastName
-          }}
-        </td>
-      </tr>
+<div class="claim_details_container">
+  <h5>Basic Details</h5>
+  <div *ngFor="let usern of newuser">
+    <div
+      class="list_item"
+      *ngIf="usern.claimDetails.claimNumber == this.claimid"
+    >
+      <table class="details_table">
+        <tr>
+          <td>Patient Name</td>
+          <td>
+            {{
+              usern.patientDetails.firstName +
+                ' ' +
+                usern.patientDetails.lastName
+            }}
+          </td>
+        </tr>
 
-      <tr>
-        <td>Claim Number</td>
-        <td>
-          {{ usern.claimDetails.claimNumber }}
-        </td>
-      </tr>
+        <tr>
+          <td>Claim Number</td>
+          <td>
+            {{ usern.claimDetails.claimNumber }}
+          </td>
+        </tr>
 
-      <tr>
-        <td>Date Submitted</td>
-        <td>
-          {{ usern.claimDetails.dateSubmitted | date: 'dd/MM/yyyy' }}
-        </td>
-      </tr>
+        <tr>
+          <td>Date Submitted</td>
+          <td>
+            {{ usern.claimDetails.dateSubmitted | date: 'dd/MM/yyyy' }}
+          </td>
+        </tr>
 
-      <tr>
-        <td>Claim Status</td>
-        <td>
-          {{ usern.claimDetails.claimStatus }}
-        </td>
-      </tr>
-    </table>
-
-    
+        <tr>
+          <td>Claim Status</td>
+          <td>
+            {{ usern.claimDetails.claimStatus }}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
+
+  <h5>Please Upload The Required Files</h5>
+  <!-- <label for="myfile">Select a file:</label>
+  <input
+    type="file"
+    id="myfile"
+    name="myfile"
+    (change)="getfile($event)"
+  /><br /><br />
+  <input type="button" (click)="submitData()" value="Send" /> -->
+  <button mat-raised-button color="primary" routerLink="">Back</button>
 </div>
-<br />
-<button mat-raised-button color="primary" routerLink="">Primary</button>
-<!-- <a routerLink="">Click for Home</a> -->

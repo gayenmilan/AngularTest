@@ -21,7 +21,7 @@ export class ClaimstatusComponent {
     },
     {
       patientDetails: {
-        firstName: 'Lara',
+        firstName: 'John',
         lastName: 'Smith',
       },
       claimDetails: {

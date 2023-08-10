@@ -15,7 +15,6 @@ import { ClaimstatusComponent } from './claimstatus/claimstatus.component';
 import { ClaimdetailsComponent } from './claimdetails/claimdetails.component';
 
 const appRoutes: Routes = [
-  //{ path: '', component: AppComponent },
   { path: '', component: ClaimstatusComponent },
   { path: 'claimdetails', component: ClaimdetailsComponent },
   { path: 'claimdetails/:claimNumber', component: ClaimdetailsComponent },

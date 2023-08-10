@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -8,7 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ClaimdetailsComponent {
   claimid: any;
-  constructor(public router: Router, private activatedroute: ActivatedRoute) {}
+  constructor(
+    public router: Router,
+    private activatedroute: ActivatedRoute
+  ) // private http: HttpClient
+  {}
 
   ngOnInit(): void {
     this.activatedroute.paramMap.subscribe((params) => {
@@ -17,6 +22,20 @@ export class ClaimdetailsComponent {
       //alert (this.claimid);
     });
   }
+
+  // file: any;
+  // getfile(event: any) {
+  //   this.file = event.target.file[0];
+  //   console.log('file', this.file);
+  // }
+
+  // submitData() {
+  //   let formData = new FormData();
+  //   formData.set('file', this.file);
+
+  //   this.http.post('...../', formData).subscribe((Response) => {});
+  // }
+
   newuser = [
     {
       patientDetails: {
