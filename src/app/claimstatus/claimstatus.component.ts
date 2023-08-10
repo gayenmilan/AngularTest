@@ -42,6 +42,4 @@ export class ClaimstatusComponent {
       },
     },
   ];
-
-  constructor(private route: ActivatedRoute) {}
 }
