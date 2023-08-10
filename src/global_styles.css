@@ -1,17 +1,17 @@
 /* Add application styles & imports to this file! */
+/*This Import is for Angular Material Style*/
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+/*This Import is for Bootstrap Style*/
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   font-size: 14px;
   line-height: normal;
-}
-
-* {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*Common Style for Header & Footer*/
 .hdr_container,
 .ftr_container {
   background-color: #ccc;

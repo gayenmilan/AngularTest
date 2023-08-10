@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,9 +11,8 @@ export class ClaimdetailsComponent {
   claimid: any;
   constructor(
     public router: Router,
-    private activatedroute: ActivatedRoute
-  ) // private http: HttpClient
-  {}
+    private activatedroute: ActivatedRoute // private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.activatedroute.paramMap.subscribe((params) => {
