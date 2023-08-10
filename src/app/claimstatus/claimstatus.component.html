@@ -21,7 +21,7 @@
         <tr>
           <td>Date Submitted</td>
           <td>
-            {{ user.claimDetails.dateSubmitted }}
+            {{ user.claimDetails.dateSubmitted | date: 'dd/MM/yyyy' }}
           </td>
         </tr>
 

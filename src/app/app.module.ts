@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { ClaimstatusComponent } from './claimstatus/claimstatus.component';
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   //{ path: '', component: AppComponent },
   { path: '', component: ClaimstatusComponent },
   { path: 'claimdetails', component: ClaimdetailsComponent },
+  { path: 'claimdetails/:claimNumber', component: ClaimdetailsComponent },
 ];
 
 @NgModule({
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatListModule,
     MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [AppComponent, ClaimdetailsComponent, ClaimstatusComponent],

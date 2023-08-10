@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-claimstatus',
@@ -41,4 +42,6 @@ export class ClaimstatusComponent {
       },
     },
   ];
+
+  constructor(private route: ActivatedRoute) {}
 }

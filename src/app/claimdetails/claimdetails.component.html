@@ -20,7 +20,7 @@
       <tr>
         <td>Date Submitted</td>
         <td>
-          {{ usern.claimDetails.dateSubmitted }}
+          {{ usern.claimDetails.dateSubmitted | date: 'dd/MM/yyyy' }}
         </td>
       </tr>
 
@@ -33,5 +33,6 @@
     </table>
   </div>
 </div>
-
-<a routerLink="">Click for Home</a>
+<br />
+<button mat-raised-button color="primary" routerLink="">Primary</button>
+<!-- <a routerLink="">Click for Home</a> -->
