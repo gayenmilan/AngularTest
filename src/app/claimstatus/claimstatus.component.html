@@ -49,7 +49,10 @@
           </td>
         </tr>
       </table>
-      <a aria-label="Route to Details Page" routerLink="/claimdetails">
+      <a
+        aria-label="Route to Details Page"
+        routerLink="/claimdetails/{{ user.claimDetails.claimNumber }}"
+      >
         <mat-icon
           *ngIf="user.claimDetails.claimStatus !== 'COMPLETED'"
           class="arrow_custom"

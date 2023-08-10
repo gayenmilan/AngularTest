@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-claimdetails',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./claimdetails.component.css'],
 })
 export class ClaimdetailsComponent {
+  claimid: any;
+  constructor(public router: Router, private activatedroute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.activatedroute.paramMap.subscribe((params) => {
+      this.claimid = params.get('claimNumber');
+
+      //alert (this.claimid);
+    });
+  }
   newuser = [
     {
       patientDetails: {

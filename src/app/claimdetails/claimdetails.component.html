@@ -1,5 +1,5 @@
 <div *ngFor="let usern of newuser">
-  <div class="list_item" *ngIf="usern.claimDetails.claimNumber == 'CL34246334'">
+  <div class="list_item" *ngIf="usern.claimDetails.claimNumber == this.claimid">
     <table class="details_table">
       <tr>
         <td>Patient Name</td>
@@ -31,6 +31,8 @@
         </td>
       </tr>
     </table>
+
+    
   </div>
 </div>
 <br />
